@@ -1,0 +1,28 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="'side'" position="end" opened style="width: 250px; background-color: rgb(231, 231, 231);">
+  
+    <div class="nav-menu">
+      <ul>
+        <li ><a routerLink="/test1" class='more-icon' routerLinkActive="active" >
+          <span>
+            <i class="fa fa-home" style="margin-left: 10px;"></i>
+            <span>Feed</span>
+          </span>
+          <i class="fa fa-caret-left"></i>
+          </a></li>
+        <li><a routerLink="/test2" routerLinkActive="active">Explore<span class="icon-search2 mr-3 icnos"></span></a></li>
+        <li><a href="#">Notifications<span class="icon-notifications mr-3 icnos"></span></a></li>
+        <li><a href="#">Direct<span class="icon-location-arrow mr-3 icnos"></span></a></li>
+        <li><a href="#">Stats<span class="icon-pie-chart mr-3 icnos"></span></a></li>
+        <li><a href="#">Sign out<span class="icon-sign-out mr-3 icnos"></span></a></li>
+      </ul>
+    </div>
+  
+  </mat-drawer>
+  <mat-drawer-content style="height: 100vh;">
+    
+    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<router-outlet></router-outlet>
